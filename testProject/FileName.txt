@@ -1,0 +1,37 @@
+#include "iostream";
+#include "stdlib.h";
+#include "string.h";
+using namespace std;
+
+int main()
+{
+    int n{ 3 };       // количество строк
+
+    int(*a)[2] = new int[n][2];
+
+    int k{};
+    // устанавливаем значения
+    for (unsigned i{}; i < n; i++)
+    {
+        // устанавливаем данные для столбцов i-й строки
+        for (unsigned j{}; j < 2; j++)
+        {
+            a[i][j] = ++k;
+        }
+    }
+
+    // вывод данных
+    for (unsigned i{}; i < n; i++)
+    {
+        // выводим данные столбцов i-й строки
+        for (unsigned j{}; j < 2; j++)
+        {
+            std::cout << a[i][j] << "\t";
+        }
+        std::cout << std::endl;
+    }
+
+    // удаляем данные
+    delete[] a;
+    a = nullptr;
+}
