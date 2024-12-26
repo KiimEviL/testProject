@@ -14,7 +14,7 @@ public:
 	string getName() {
 		return pName;
 	}
-	void setNext(Player* next) {
+	void stNext(Player* next) {
 		pNext = next;
 	}
 };
@@ -34,7 +34,7 @@ public:
 			while (lHead->getNext()) {
 				lHead = lHead->getNext();
 			}
-			lHead->setNext(pNew);
+			lHead->stNext(pNew);
 		}
 		//else {
 		//	Player* pTemp = lHead;
@@ -66,6 +66,8 @@ int main() {
 	l.addPlayer("bbb");
 	l.addPlayer("sss");
 	l.addPlayer("ddd");
+	l.addPlayer("eee");
+	l.addPlayer("www");
 	l.showAll();
 
 	return 0;
